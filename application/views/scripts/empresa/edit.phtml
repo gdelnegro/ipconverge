@@ -1,0 +1,18 @@
+<form action="<?=$this->url(array("controller"=>"empresa","action"=>"update"),null,true)?>" method="post">
+   <input type="hidden" name="id" value="<?=$this->empresa['id']?>" />
+   <table width="100%" cellpadding="3" cellspacing="2">
+      <tr>
+         <td>Nome:</td>
+         <td><input type="text" name="nome" value="<?=$this->empresa['nome']?>" /></td>
+      </tr>
+      <tr>
+         <td>CNPJ:</td>
+         <td><input type="text" name="cnpj" value="<?=$this->empresa['cnpj']?>" /></td>
+      </tr>
+      <tr>
+         <td>Responsavel:</td>
+         <td><input type="text" name="responsavel" value="<?=$this->empresa['responsavel']?>" /></td>
+      </tr>
+   </table>
+   <input type="submit" value="Enviar" />
+</form>

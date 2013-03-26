@@ -1,0 +1,16 @@
+<table width="100%" cellpadding="3" cellspacing="0" border="1">
+   <tr>
+      <td>Nome:</td>
+      <td><?=$this->empresa['nome']?></td>
+   </tr>
+   <tr>
+      <td>CNPJ:</td>
+      <td><?=$this->empresa['cnpj']?></td>
+   </tr>
+   <tr>
+      <td>Responsavel:</td>
+      <td><?=$this->empresa['responsavel']?></td>
+   </tr>
+</table>
+
+<a href="<?=$this->url(array("controller"=>"empresa"),null,true)?>">Voltar a pagina inicial</a>
