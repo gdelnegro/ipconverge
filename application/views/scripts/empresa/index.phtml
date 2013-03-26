@@ -1,4 +1,11 @@
-<a href="<?=$this->url(array("controller"=>"empresa","action"=>"new"),null,true)?>">Cadastrar Empresa</a>
+<head>
+<?php echo $this->headLink()->appendStylesheet('media/css/bootstrap.css') ?>
+
+</head>
+
+<div class="hero-unit">
+    <h1>Cadastro de Empresas</h1>
+<a class="btn btn-primary" href="<?=$this->url(array("controller"=>"empresa","action"=>"new"),null,true)?>">Cadastrar Empresa</a>
 <table width="100%" cellpadding="3" cellspacing="0" border="1">
    <tr>
       <th>CNPJ</th>
