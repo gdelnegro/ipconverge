@@ -25,7 +25,7 @@ class EmpresaController extends Zend_Controller_Action
     public function createAction(){
         $model = new Application_Model_Empresa();
         $model->insert($this->_getAllParams());
-        $this->redirect('empresa/index');
+        $this->redirect('empresa/');
     }
     
     public function editAction(){

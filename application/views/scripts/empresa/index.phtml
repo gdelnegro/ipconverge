@@ -1,12 +1,12 @@
 <head>
-<?php echo $this->headLink()->appendStylesheet('media/css/bootstrap.css') ?>
-
+<title>Cadastro de Empresas</title>
 </head>
 
 <div class="hero-unit">
     <h1>Cadastro de Empresas</h1>
-<a class="btn btn-primary" href="<?=$this->url(array("controller"=>"empresa","action"=>"new"),null,true)?>">Cadastrar Empresa</a>
-<table width="100%" cellpadding="3" cellspacing="0" border="1">
+<p class="text-right"> <a class="btn btn-primary" href="<?=$this->url(array("controller"=>"empresa","action"=>"new"),null,true)?>">Cadastrar Empresa</a></p>
+
+<table class="table table-striped table-hover table-bordered table-condensed" width="100%" cellpadding="3" cellspacing="0" border="1">
    <tr>
       <th>CNPJ</th>
       <th>Nome</th>
@@ -17,9 +17,9 @@
       <td><?=$empresa['cnpj']?></td>
       <td><?=$empresa['nome']?></td>
       <td>
-         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"show","id"=>"{$empresa['id']}"),null,true)?>">Visualizar</a>
-         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"edit","id"=>"{$empresa['id']}"),null,true)?>">Alterar</a>
-         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"destroy","id"=>"{$empresa['id']}"),null,true)?>">Apagar</a>
+         <a class="icon-eye-open" href="<?=$this->url(array("controller"=>"empresa","action"=>"show","id"=>"{$empresa['id']}"),null,true)?>"></a>
+         <a class="icon-pencil" href="<?=$this->url(array("controller"=>"empresa","action"=>"edit","id"=>"{$empresa['id']}"),null,true)?>"></a>
+         <a class="icon-trash" href="<?=$this->url(array("controller"=>"empresa","action"=>"destroy","id"=>"{$empresa['id']}"),null,true)?>"></a>
       </td>
    </tr>
    <?endforeach;?>
