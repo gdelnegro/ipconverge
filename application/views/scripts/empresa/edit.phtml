@@ -1,6 +1,6 @@
 <form action="<?=$this->url(array("controller"=>"empresa","action"=>"update"),null,true)?>" method="post">
    <input type="hidden" name="id" value="<?=$this->empresa['id']?>" />
-   <table width="100%" cellpadding="3" cellspacing="2">
+   <table class="table table-striped table-hover table-bordered table-condensed" width="100%" cellpadding="3" cellspacing="2">
       <tr>
          <td>Nome:</td>
          <td><input type="text" name="nome" value="<?=$this->empresa['nome']?>" /></td>

@@ -1,2 +1,15 @@
-<?php echo $this->headLink()->appendStylesheet(Zend_Controller_Front::getInstance()->getBaseUrl().'/media/css/bootstrap.css')?>
-    <?php echo $this->layout()->content; ?>
+<?=$this->doctype('HTML5')?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <base href="http://<?=$_SERVER['HTTP_HOST'] . $this->baseUrl()?>/" />
+        <title>IpConverge</title>
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headLink()->appendStylesheet(Zend_Controller_Front::getInstance()->getBaseUrl().'/media/css/bootstrap.css')?>
+    </head>
+    
+    <div id="header"><?php echo $this->partial('header.phtml'); ?></div>
+    <div id="nav"><?php echo $this->layout('nav.phtml')->nav; ?></div>
+    <div id="content"><?php echo $this->layout()->content; ?></div>
+    <div id="sidebar"><?php echo $this->layout()->sidebar; ?></div>
+    <div id="footer"><?php echo $this->partial('footer.phtml');?></div>
