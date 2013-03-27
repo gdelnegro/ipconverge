@@ -1,0 +1,35 @@
+
+    <h2>Cadastro de Empresas - Visualizar Cadastro</h2>
+    
+<table class="table table-striped table-hover table-bordered table-condensed" width="100%" cellpadding="3" cellspacing="0" border="1">
+   <tr>
+      <td>Nome:</td>
+      <td><?=$this->empresa['nome']?></td>
+   </tr>
+   <tr>
+      <td>CNPJ:</td>
+      <td><?=$this->empresa['cnpj']?></td>
+   </tr>
+   <tr>
+      <td>Responsavel:</td>
+      <td><?=$this->empresa['responsavel']?></td>
+   </tr>
+   <tr>
+       <td>Email do responsavel:</td>
+       <td><?php echo $this->empresa['email_responsavel'];?></td>
+   </tr>
+   <tr>
+       <td>Telefone do responsavel</td>
+       <td><?php echo $this->empresa['tel_responsavel'];?></td>
+   </tr>
+   <tr>
+       <td>Data de alteração</td>
+       <td><?php echo $this->empresa['dt_alteracao'];?></td>
+   </tr>
+   <tr>
+       <td>Ultima alteração por:</td>
+       <td><?php echo $this->empresa['usr_alterou']?></td>
+   </tr>
+</table>
+
+<a class="" href="<?=$this->url(array("controller"=>"empresa"),null,true)?>">Voltar a pagina inicial</a>

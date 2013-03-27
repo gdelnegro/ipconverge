@@ -17,9 +17,9 @@
       <td><?=$empresa['cnpj']?></td>
       <td><?=$empresa['nome']?></td>
       <td>
-         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"show","id"=>"{$empresa['id']}"),null,true)?>"><i class="icon-eye-open"></i> Visualizar</a>
-         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"edit","id"=>"{$empresa['id']}"),null,true)?>"><i class="icon-pencil"></i>Editar</a>
-         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"destroy","id"=>"{$empresa['id']}"),null,true)?>"><i class="icon-trash"></i>Excluir</a>
+         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"show","id"=>"{$empresa['id']}"),null,true)?>"><button class="btn btn-primary">Visualizar<i class="icon-eye-open"></i></button> </a>
+         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"edit","id"=>"{$empresa['id']}"),null,true)?>"><button class="btn btn-primary"> Editar<i class="icon-pencil"></button></i></a>
+         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"destroy","id"=>"{$empresa['id']}"),null,true)?>"><button class="btn btn-primary"> Excluir<i class="icon-trash"></button></i></a>
       </td>
    </tr>
    <?endforeach;?>
