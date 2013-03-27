@@ -9,7 +9,7 @@
     </head>
     
     <div id="header"><?php echo $this->partial('header.phtml'); ?></div>
-    <div id="nav"><?php echo $this->layout('nav.phtml')->nav; ?></div>
+    <div id="nav"><?php echo $this->layout()->nav; ?></div>
     <div id="content"><?php echo $this->layout()->content; ?></div>
-    <div id="sidebar"><?php echo $this->layout()->sidebar; ?></div>
+    <div id="sidebar"><?php echo $this->partial('sidebar.phtml'); ?></div>
     <div id="footer"><?php echo $this->partial('footer.phtml');?></div>

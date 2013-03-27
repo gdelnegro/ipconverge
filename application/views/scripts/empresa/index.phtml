@@ -3,7 +3,7 @@
 </head>
 
 
-    <h1>Cadastro de Empresas</h1>
+    <h2>Cadastro de Empresas - Todos os cadastros</h2>
 <p class="text-right"> <a class="btn btn-primary" href="<?=$this->url(array("controller"=>"empresa","action"=>"new"),null,true)?>">Cadastrar Empresa</a></p>
 
 <table class="table table-striped table-hover table-bordered table-condensed" width="100%" cellpadding="3" cellspacing="0" border="1">
@@ -17,9 +17,9 @@
       <td><?=$empresa['cnpj']?></td>
       <td><?=$empresa['nome']?></td>
       <td>
-         <a class="icon-eye-open" href="<?=$this->url(array("controller"=>"empresa","action"=>"show","id"=>"{$empresa['id']}"),null,true)?>"></a>
-         <a class="icon-pencil" href="<?=$this->url(array("controller"=>"empresa","action"=>"edit","id"=>"{$empresa['id']}"),null,true)?>"></a>
-         <a class="icon-trash" href="<?=$this->url(array("controller"=>"empresa","action"=>"destroy","id"=>"{$empresa['id']}"),null,true)?>"></a>
+         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"show","id"=>"{$empresa['id']}"),null,true)?>"><i class="icon-eye-open"></i> Visualizar</a>
+         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"edit","id"=>"{$empresa['id']}"),null,true)?>"><i class="icon-pencil"></i>Editar</a>
+         <a href="<?=$this->url(array("controller"=>"empresa","action"=>"destroy","id"=>"{$empresa['id']}"),null,true)?>"><i class="icon-trash"></i>Excluir</a>
       </td>
    </tr>
    <?endforeach;?>
