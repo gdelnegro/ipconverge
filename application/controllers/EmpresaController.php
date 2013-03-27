@@ -35,15 +35,15 @@ class EmpresaController extends Zend_Controller_Action
     }
     
     public function updateAction(){
-      $model = new Application_Model_Empresa();
-      $model->update($this->_getAllParams());
-      $this->_redirect('empresa/index');
+        $model = new Application_Model_Empresa();
+        $model->update($this->_getAllParams());
+        $this->_redirect('empresa/index');
    }
    
    public function destroyAction(){
-      $model = new Application_Model_Empresa();
-      $model->delete($this->_getParam('id'));
-      $this->_redirect('empresa/index');
+        $model = new Application_Model_Empresa();
+        $model->delete($this->_getParam('id'));
+        $this->_redirect('empresa/index');
    }
 
 }

@@ -2,6 +2,14 @@
 
 class Application_Model_Empresa
 {
+    
+    /**
+     * 
+     * @param type $where
+     * @param type $order
+     * @param type $limit
+     * @return type
+     */
     public function select($where = null, $order = null, $limit = null){
         $dao = new Application_Model_DbTable_Empresa();
         $select = $dao->select()->from($dao)->order($order)->limit($limit);
@@ -10,13 +18,22 @@ class Application_Model_Empresa
         }
         return $dao->fetchAll($select)->toArray();
     }
-    
+    /**
+     * 
+     * @param type $id
+     * @return type
+     */
     public function find($id){
         $dao = new Application_Model_DbTable_Empresa();
         $arr = $dao->find($id)->toArray();
         return $arr[0];
     }
     
+    /**
+     * 
+     * @param array $request
+     * @return type
+     */
     public function insert(array $request){
         $dao = new Application_Model_DbTable_Empresa();
         $date = Zend_Date::now()->toString('yyyyMMddHHmmss');
@@ -31,6 +48,10 @@ class Application_Model_Empresa
         return $dao->insert($dados);
     }
     
+    /**
+     * 
+     * @param array $request
+     */
     public function update(array $request){
         $dao = new Application_Model_DbTable_Empresa();
         $date = Zend_Date::now()->toString('yyyyMMddHHmmss');
@@ -46,6 +67,10 @@ class Application_Model_Empresa
         $dao->update($dados, $where);
     }
     
+    /**
+     * 
+     * @param type $id
+     */
     public function delete($id){
         $dao = new Application_Model_DbTable_Empresa();
         $where = $dao->getAdapter()->quoteInto("id = ?", $id);
