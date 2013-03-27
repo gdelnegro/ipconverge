@@ -19,24 +19,28 @@ class Application_Model_Empresa
     
     public function insert(array $request){
         $dao = new Application_Model_DbTable_Empresa();
+        $date = Zend_Date::now()->toString('yyyyMMddHHmmss');
         $dados = array(
             'cnpj' => $request['cnpj'],
             'nome' => $request['nome'],
             'responsavel' => $request['responsavel'],
             'email_responsavel' => $request['email_responsavel'],
-            'tel_responsavel' => $request['tel_responsavel']
+            'tel_responsavel' => $request['tel_responsavel'],
+            'dt_alteracao' => $date
         );
         return $dao->insert($dados);
     }
     
     public function update(array $request){
         $dao = new Application_Model_DbTable_Empresa();
+        $date = Zend_Date::now()->toString('yyyyMMddHHmmss');
         $dados = array(
             'cnpj' => $request['cnpj'],
             'nome' => $request['nome'],
             'responsavel' => $request['responsavel'],
             'email_responsavel' => $request['email_responsavel'],
-            'tel_responsavel' => $request['tel_responsavel']
+            'tel_responsavel' => $request['tel_responsavel'],
+            'dt_alteracao' => $date
         );
         $where = $dao->getAdapter()->quoteInto("id = ?", $request['id']);
         $dao->update($dados, $where);
